@@ -1,0 +1,166 @@
+{
+  "name": "Azhagesan Ranganathan",
+  "role": "Java Backend Developer",
+  "location": "Salem, Tamil Nadu, India",
+  "email": "azhagesanr.gctcse@gmail.com",
+  "phone": "+91 94454 93181",
+  "github": "https://github.com/Azhagesan-Coder",
+  "linkedin": "https://www.linkedin.com/in/azhagesan-ranganathan",
+  "summary": "Software engineer with 4+ years of experience designing, developing and supporting enterprise applications. Focused on Java, Spring Boot, secure APIs and dependable banking systems.",
+  "experience": [
+    {
+      "period": "Oct 2025 — Jun 2026",
+      "location": "Enterprise banking",
+      "role": "Software Engineer",
+      "company": "Atem Software Solutions Pvt Ltd",
+      "details": [
+        "Developed banking solutions for a Singapore-based financial institution, contributing to MRB and MCB modules across retail and corporate banking.",
+        "Developed and maintained Java and Spring Boot microservices, with RESTful APIs for banking operations and customer services.",
+        "Contributed application enhancements, bug fixes, production support, performance optimization and reliability improvements.",
+        "Used Linux, PuTTY and WinSCP for deployment, monitoring and troubleshooting.",
+        "Collaborated with business analysts, QA teams and stakeholders, following secure coding practices and banking standards.",
+        "Used Claude Code and AI-assisted development tools to improve efficiency and code quality."
+      ]
+    },
+    {
+      "period": "Oct 2022 — Jul 2025",
+      "location": "Salem",
+      "role": "Analyst · Java Backend Developer",
+      "company": "Binary Bot",
+      "details": [
+        "Gathered business requirements and translated them into technical specifications.",
+        "Built scalable backend modules with Java, Spring Boot and Hibernate; implemented RESTful APIs for frontend and third-party integration.",
+        "Integrated Spring Security for authentication and authorization.",
+        "Wrote SQL queries and used Spring Data JPA for database operations.",
+        "Participated in Agile ceremonies, used Git and JIRA, and supported UAT and post-production operations."
+      ]
+    },
+    {
+      "period": "Aug 2021 — Sep 2022",
+      "location": "Coimbatore",
+      "role": "IT Support · ERP & IT",
+      "company": "Muthupandian Enterprise",
+      "details": [
+        "Provided ERP technical support and troubleshooting as the first point of contact for issues and service requests.",
+        "Managed ERP users and access controls; supported implementation, upgrades and patches.",
+        "Maintained data integrity through audits and validation, coordinating with vendors and internal teams to resolve issues."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Java",
+        "SQL",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Spring Boot",
+        "Spring MVC",
+        "Hibernate",
+        "Microservices",
+        "Mobeix"
+      ]
+    },
+    {
+      "category": "Security",
+      "items": [
+        "Spring Security",
+        "JWT",
+        "OAuth2"
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        "MySQL",
+        "MSSQL"
+      ]
+    },
+    {
+      "category": "APIs",
+      "items": [
+        "RESTful APIs",
+        "SOAP APIs",
+        "JSON",
+        "Swagger"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Maven",
+        "Gradle",
+        "Git",
+        "GitHub",
+        "GitHub Desktop",
+        "Postman",
+        "JIRA",
+        "JasperReports"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": [
+        "CI/CD",
+        "Jenkins",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "category": "Operations",
+      "items": [
+        "Linux",
+        "PuTTY",
+        "WinSCP",
+        "Log4j",
+        "SLF4J"
+      ]
+    },
+    {
+      "category": "AI development",
+      "items": [
+        "Claude Code",
+        "Cursor"
+      ]
+    },
+    {
+      "category": "Methodologies",
+      "items": [
+        "Agile",
+        "Scrum"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.E. Computer Science & Engineering",
+      "school": "Gnanamani College of Technology, Anna University, Namakkal",
+      "period": "2017 — 2021",
+      "score": "71.5%"
+    },
+    {
+      "degree": "HSC · Computer Science",
+      "school": "Paavendhar Matric Higher Secondary School, Salem",
+      "period": "2015 — 2017",
+      "score": "78.25%"
+    },
+    {
+      "degree": "SSLC",
+      "school": "St. Graham Memorial Higher Secondary School, Salem",
+      "period": "2014 — 2015",
+      "score": "79.4%"
+    }
+  ],
+  "languages": [
+    "Tamil",
+    "English"
+  ]
+}
