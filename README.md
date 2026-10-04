@@ -18,7 +18,7 @@ The UI falls back to `frontend/public/profile.json` if the profile API is offlin
 - `GET /api/health`: readiness check.
 - `POST /api/contact`: `{ "name": "Visitor", "email": "visitor@example.com", "message": "A message of at least 10 characters", "website": "" }`.
 
-Contact returns success only after SMTP accepts delivery. It is disabled until explicitly configured; HTTP 503 is returned while disabled or when delivery fails. The API does not store messages.
+Contact returns success only after Brevo accepts delivery. It is disabled until explicitly configured; HTTP 503 is returned while disabled or when delivery fails. The API does not store messages.
 
 ## Deploy the Angular frontend to GitHub Pages
 
@@ -35,23 +35,14 @@ Use any Java/container host. Build the included Dockerfile with `backend` as its
 
 Set `CORS_ORIGINS=https://azhagesan-coder.github.io` (origin only, no path). Set the frontend's `public/config.json` `apiBaseUrl` to the backend HTTPS origin, e.g. `https://your-api-host.example`, and rebuild/redeploy the frontend. No credentials belong in frontend configuration.
 
-To enable contact delivery, configure these **backend environment variables**:
+## Free email and hosting
 
-| Variable | Purpose |
-| --- | --- |
-| `CONTACT_ENABLED` | `true` after SMTP is configured |
-| `SMTP_HOST`, `SMTP_PORT` | Mail provider host and port; default port 587 |
-| `SMTP_USERNAME`, `SMTP_PASSWORD` | Mail provider credentials |
-| `SMTP_AUTH`, `SMTP_STARTTLS` | Default `true`; adjust for your provider |
-| `CONTACT_FROM` | Provider-approved sender address |
-| `CONTACT_TO` | Recipient; defaults to resume email |
-| `CORS_ORIGINS` | Comma-separated frontend origins |
-| `PORT` | API port; defaults to 8080 |
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the complete Render Free + Brevo API setup. The root `render.yaml` prepares the Docker web service. Set `BREVO_API_KEY`, `CONTACT_FROM`, and `CONTACT_ENABLED=true` on the backend. `CONTACT_TO` defaults to the resume email. No SMTP configuration is needed.
 
-Keep SMTP secrets in the hosting provider's secret settings. For public deployments enable your host's rate limiting for `/api/contact`; the form includes a honeypot, but it is not a substitute for rate limiting.
+Success means Brevo accepted the email; actual inbox delivery can be checked in Brevo logs. Provider failure and missing configuration return HTTP 503.
 
 ## Verification
 
-Frontend: `npm run build`. Backend: `mvn test` / `mvn package`. Contact service tests cover disabled delivery, recipient/reply-to behavior and SMTP failure propagation.
+Frontend: `npm run build`. Backend: `mvn test` / `mvn package`. Contact service tests cover disabled delivery, recipient/reply-to behavior and Brevo failure propagation.
 
 The new application source is under `frontend/` and `backend/`. The compiled Angular browser files are also committed in root `dist/` so the existing GitHub Pages workflow can deploy them. After frontend edits, rebuild with `npm run build:pages`, replace the root `dist/` contents with `frontend/dist/portfolio/browser/`, and commit the updated source and build together.

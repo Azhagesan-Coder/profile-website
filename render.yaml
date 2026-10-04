@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: azhagesan-portfolio-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/health
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: -XX:MaxRAMPercentage=65.0
+      - key: CONTACT_ENABLED
+        value: true
+      - key: BREVO_API_KEY
+        sync: false
+      - key: CONTACT_FROM
+        sync: false
+      - key: CONTACT_TO
+        value: azhagesanr.gctcse@gmail.com
+      - key: CORS_ORIGINS
+        value: https://azhagesan-coder.github.io
